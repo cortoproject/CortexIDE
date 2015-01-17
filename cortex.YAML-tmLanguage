@@ -1,0 +1,49 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Cortex
+scopeName: source.cortex
+fileTypes: [cx]
+uuid: 5c7db884-27a2-4eaa-a18b-0cd7fa9b0c5e
+
+patterns:
+- name: comment.line.double-slash.cortex
+  match: "//.*"
+
+- name: constant.numeric.cortex
+  match: \b[0-9]+
+
+- name: string.quoted.double.cortex
+  match: \"([^\\"]|\\\\|\\")*\"
+
+- name: keyword.control.cortex
+  match: \b(if|else|while|switch|case|default|break|try|catch)\b
+
+- name: keyword.control.event.cortex
+  match: \b(on|update|declare|define|destruct|scope|self)\b
+
+- name: storage.type.cortex
+  match: \b(void|object|any)\b
+
+- name: storage.type.primitive.base.cortex
+  match: \b(boolean|binary|character|int|uint|float|enum|bitmask|text)\b
+
+- name: storage.type.primitive.cortex
+  match: \b(octet|word|bool|char|uint8|uint16|uint32|uint64|int8|int16|int32|int64|float32|float64|string)\b
+
+- name: storage.type.interface.cortex
+  match: \b(interface|struct|class|member)\b
+
+- name: storage.type.collection.cortex
+  match: \b(collection|array|sequence|list|map)\b
+
+- name: storage.type.procedure.cortex
+  match: \b(function|method|virtual|delegate|callback|observer)\b
+
+- name: constant.language.cortex
+  match: \b(null|true|false)\b
+
+- name: storage.modifier.cortex
+  match: \b(var)\b
+
+- name: keyword.operator.cortex
+  match: \:|\;|(|)|\[|\]|\.|\{|\}|,|\+|-|\*|/|%|\+\+|--|!|&|~|<|>|\?|<=|>=|==|!=|\||\^|\|\||&&|=|\*=|/=|\+=|-=|\|=|&=|\:\:|\:\:\:|->|<-|<<|>>|@|`|\b(and|or|not)\b
